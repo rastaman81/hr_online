@@ -1,0 +1,95 @@
+body{
+  margin: 0;
+  padding: 0;
+  font-family: Roboto, Arial;
+  text-align: center;
+}
+
+.header-div {
+  text-align: center;
+}
+
+.avatar {
+  margin-top: 80px;
+  width: 270px;
+}
+
+.hrmd {
+  margin-top: 0;
+  padding-top: 0;
+  text-align: center;
+  color: rgb(224, 13, 13);
+  top: -2px;
+  position: relative;
+}
+
+.input-name {
+  width: 250px;
+  height: 30px;
+  border: 1px solid rgb(153, 153, 153); 
+  border-radius: 10px;
+  font-size: 14px;
+  padding: 5px 10px;
+  margin-top: 35px;
+  margin-bottom: 35px;
+  margin-right: 0;
+  font-weight: 500
+}
+
+.submit-button {
+  margin: 0;
+  height: 43px;
+  width: 100px;
+  border-radius: 50px;
+  border: 1px solid rgb(224, 13, 13);
+  font-size: 15px;
+  background-color: rgb(224, 13, 13);
+  color: white;
+  transition: 0.15s; 
+  cursor: pointer;
+
+}
+
+.submit-button:hover {
+  opacity: .8;
+}
+
+#employees {
+  margin-left: auto;
+  margin-right: auto;
+  width: auto;
+  font-size: 15px;
+  line-height: 24px;
+  border-collapse: collapse;
+  padding: 8px;
+  
+  
+}
+
+#employees td, #employees th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#employees tr:nth-child(even){background-color: #f2f2f2;}
+
+#employees tr:hover {
+  background-color: #ddd;
+  cursor: pointer;
+
+}
+
+#employees th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  background-color: #c02a2a;
+  color: white;
+}
+
+footer {
+  color: rgb(153, 153, 153); 
+  font-size: small;
+}
+
+

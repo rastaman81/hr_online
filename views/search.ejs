@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>HR Online | <%= title %></title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/styles-search.css">
+    <link rel="icon" href="/img/ml_icon.png">
+  </head>
+  <body>
+    <header>
+      <div class="header-div">
+        <img src="/img/ml-logo.png" alt="" class="avatar">
+        <h4 class="hrmd">Human Resources Management Division</h2>
+      </div>
+    </header>
+    <main>
+      <form action="/search" class="form" method="POST">
+        <div class="input">
+          <input type="text" name="name" id="" placeholder="Input Last Name or First Name" class="input-name">
+          <input type="submit" value="Search" class="submit-button">
+        </div>
+      </form>
+      <div>
+        <table id="employees">
+          <tr>
+            <th>IDNO</th>
+            <th>LAST NAME</th>
+            <th>FIRST NAME</th>
+            <th>MIDDLE NAME</th>
+            <th>OFFICE</th>
+            <th>REGION</th>
+            <th>DATE HIRED</th>
+            <th>DESIGNATION/STATUS</th>
+          </tr>
+          
+          <% if (employees.length > 0) {%>
+            <% console.log(employees)%>
+              <% employees.forEach(employee => { %>                        
+                <tr>
+                  <td><%= employee.idno %></td>
+                  <td><%= employee.lastName %></td>
+                  <td><%= employee.firstName %></td>
+                  <td><%= employee.middleName %></td>
+                  <td><%= employee.office %></td>
+                  <td><%= employee.region %></td>
+                  <td><%= employee.dateHired %></td>
+                  <td><%= employee.status %></td>
+                </tr>
+            <% }) %>
+          <% } %>
+          
+            
+
+        </table>
+      </div>
+    </main>
+    
+    <%- include('../partials/footer.ejs') %>
+    
+    <script src="/js/test.js"></script>
+    
+  </body>
+</html>
